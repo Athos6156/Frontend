@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .sign-in-form {
+            background-color: white;
+            padding: 40px; /* Increased padding */
+            border-radius: 8px; /* Slightly larger radius */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            width: 400px; /* Set a specific width */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Increased spacing */
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px; /* Increased spacing */
+            font-size: 18px; /* Larger font size */
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px; /* Increased padding */
+            border: 1px solid #ddd;
+            border-radius: 5px; /* Slightly larger radius */
+            font-size: 16px; /* Larger font size */
+        }
+        .form-group button {
+            width: 100%;
+            padding: 15px; /* Increased padding */
+            background-color: #545454;
+            color: white;
+            border: none;
+            border-radius: 5px; /* Slightly larger radius */
+            cursor: pointer;
+            font-size: 18px; /* Larger font size */
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="sign-in-form">
+        <h2>Sign In</h2>
+        <form action="/submit-your-login-form" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign In</button>
+            </div>
+        </form>
+
+        <div class="form-group">
+            <a href="http://127.0.0.1:5000/login" class="google-sign-in-button">
+                <button type="button" class="google-sign-in-button">Sign in with <img src="google.png" alt="Google logo" style="width: 72px; height: 24px;"></button>
+                 <!-- Add your Google logo URL here -->
+        </div>
+
+    </div>
+
+</body>
+</html>
+

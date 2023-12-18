@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div id="logo">ShopMock</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#" id="cart">Cart (0)</a></li>
+            <li><a href="#">Order Management</a></li>
+            <li><a href="#" id="signin">Sign In</a></li>
+        </ul>
+    </nav>
+    <section id="order-management-content">
+        <h2>Order Management</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Order -->
+                <tr>
+                    <td>1001</td>
+                    <td>John Doe</td>
+                    <td>10/20/2023</td>
+                    <td>$150.00</td>
+                    <td>Shipped</td>
+                    <td>
+                        <button class="view-order">View</button>
+                        <button class="process-order">Process</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script src="order-scripts.js"></script>
+</body>
+</html>

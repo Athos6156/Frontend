@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: #3d3d3d;
+            color: white;
+            text-align: left;
+            padding: 10px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Athos</h1>
+    </header>
+
+    <main>
+        <form id="userForm">
+            <label for="customerID">Customer ID:</label>
+            <input type="text" id="customerID" name="Customer_ID" placeholder="new1" required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="new1" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="new2" required>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="first_name" placeholder="John" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="last_name" placeholder="Doe" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="520 Madison Ave, NY, NY" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="555-1234" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+</body>
+</html>
+
