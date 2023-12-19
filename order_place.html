@@ -65,8 +65,38 @@
             <label for="amount">Amount:</label>
             <input type="number" id="amount" name="amount" placeholder="437.00" step="1" required>
 
-            <input type="submit" value="Submit">
+            <button type="button" onclick="submitPayment()">Submit Payment</button>
         </form>
+
+        <script>
+            function submitPayment() {
+                // Get form data
+                var formData = {
+                    'payment_method': document.getElementById('payment_method').value,
+                    'order_id': document.getElementById('order_id').value,
+                    'amount': parseFloat(document.getElementById('amount').value)
+                };
+
+                // Make AJAX request
+                var xhr = new XMLHttpRequest();
+                // Endpoint goes here!!!!!
+                xhr.open('POST', 'microservice_endpoint_goes_here', true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Handle successful response from the microservice
+                        console.log(xhr.responseText);
+                    }
+                };
+
+                // Convert form data to JSON
+                var jsonData = JSON.stringify(formData);
+
+                // Send the request
+                xhr.send(jsonData);
+            }
+        </script>
     </main>
 
 </body>
