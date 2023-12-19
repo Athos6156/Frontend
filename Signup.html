@@ -46,6 +46,13 @@
         input[type="submit"]:hover {
             background-color: #717171;
         }
+        button {
+            background-color: #4b4b4b;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -84,8 +91,36 @@
                 <option value="other">Other</option>
             </select>
 
-            <input type="submit" value="Submit">
+            <button type="button" onclick="submitForm()">Submit</button>
         </form>
+        <script>
+            function submitForm() {
+                // Get form data
+                var formData = {
+                    'Customer_ID': document.getElementById('Customer_ID').value,
+                    'username': document.getElementById('username').value,
+                    // Add other form fields here
+                };
+
+                // Make a POST request to your microservice
+                // Karthik, change the microservice_url here.
+                fetch('microservice_url', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response from your microservice
+                    console.log('Success:', data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        </script>
     </main>
 
 </body>
