@@ -1,0 +1,3 @@
+MIDDLEWARE = [
+	'Frontend.Logging.LoggingMiddleware',
+]

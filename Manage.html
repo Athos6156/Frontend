@@ -95,7 +95,7 @@
                 "Payment_Amount": document.getElementById('paymentAmount').value
             };
             //Karthik look at here!
-            const microserviceUrl = 'https://microservice_api_endpoint';
+            const microserviceUrl = 'http://ec2-107-22-87-117.compute-1.amazonaws.com:5003/api/order/create/';
 
             fetch(microserviceUrl, {
                 method: 'POST',
