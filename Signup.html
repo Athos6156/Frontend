@@ -97,17 +97,19 @@
             function submitForm() {
                 // Get form data
                 var formData = {
-                    'Customer_ID': document.getElementById('Customer_ID').value,
-                    'username': document.getElementById('username').value,
+                    Customer_ID: document.getElementById('customerID').value,
+                    username: document.getElementById('username').value,
+					address:"520 Madison Ave NY NY"
                     // Add other form fields here
                 };
-
+				console.log(formData);
                 // Make a POST request to your microservice
                 // Karthik, change the microservice_url here.
-                fetch('http://ec2-107-22-87-117.compute-1.amazonaws.com:5002/api/user/login/', {
+                fetch("http://ec2-107-22-87-117.compute-1.amazonaws.com:5002/api/user/create/", {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
+						'Content-Type': 'application/json',
+						'Access-Control-Allow-Origin':'*',
                     },
                     body: JSON.stringify(formData),
                 })
